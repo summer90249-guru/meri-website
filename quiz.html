@@ -1,0 +1,22 @@
+<style>
+  body { text-align: center; background-color: lightpink; font-family: Arial; }
+  button { padding: 10px 20px; margin: 5px; font-size: 16px; background-color: black; color: white; border-radius: 10px; }
+</style>
+
+<h1>Mera Quiz</h1>
+<h2>HTML ka full form kya hai?</h2>
+
+<button onclick="galat()">A) Hyper Text Makeup Language</button><br>
+<button onclick="sahi()">B) Hyper Text Markup Language</button><br>
+<button onclick="galat()">C) High Text Markup Language</button><br>
+
+<h2 id="result"></h2>
+
+<script>
+function sahi() {
+  document.getElementById("result").innerText = "Sahi Jawab! ✅ 1 Point Mil Gaya";
+}
+function galat() {
+  document.getElementById("result").innerText = "Galat Jawab! ❌ Dobara Try Karo";
+}
+</script>
