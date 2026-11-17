@@ -1,0 +1,17 @@
+<style>
+  body { text-align: center; background-color: black; color: white; font-family: Arial; }
+  h1 { font-size: 60px; color: yellow; }
+</style>
+
+<h2>Meri Ghadi</h2>
+<h1 id="time"></h1>
+<p>Ye har second khud badlegi</p>
+
+<script>
+function ghadi() {
+  let abhi = new Date();
+  document.getElementById("time").innerText = abhi.toLocaleTimeString();
+}
+setInterval(ghadi, 1000);
+ghadi();
+</script>
