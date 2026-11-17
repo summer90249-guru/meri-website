@@ -1,0 +1,44 @@
+<style>
+  body { text-align: center; background-color: lightyellow; font-family: Arial; }
+  input { padding: 10px; margin: 5px; font-size: 18px; }
+  button { padding: 10px 15px; margin: 5px; font-size: 18px; background-color: black; color: white; border-radius: 10px; }
+  h1 { color: red; }
+  h2 { color: green; }
+</style>
+<h1>Mera Calculator</h1>
+<input id="num1" type="number" placeholder="Pehla Number">
+<input id="num2" type="number" placeholder="Dusra Number">
+<br><br>
+<button onclick="jodo()">Jodo +</button>
+<button onclick="ghatao()">Ghatao -</button>
+<button onclick="guna()">Guna X</button>
+<button onclick="bhag()">Bhag /</button>
+
+<h2 id="result"></h2>
+
+<script>
+function jodo() {
+  let a = document.getElementById("num1").value;
+  let b = document.getElementById("num2").value;
+  let total = Number(a) + Number(b);
+  document.getElementById("result").innerText = "Jawab hai: " + total;
+}
+function ghatao() {
+  let a = document.getElementById("num1").value;
+  let b = document.getElementById("num2").value;
+  let total = Number(a) - Number(b);
+  document.getElementById("result").innerText = "Jawab hai: " + total;
+}
+function guna() {
+  let a = document.getElementById("num1").value;
+  let b = document.getElementById("num2").value;
+  let total = Number(a) * Number(b);
+  document.getElementById("result").innerText = "Jawab hai: " + total;
+}
+function bhag() {
+  let a = document.getElementById("num1").value;
+  let b = document.getElementById("num2").value;
+  let total = Number(a) / Number(b);
+  document.getElementById("result").innerText = "Jawab hai: " + total;
+}
+</script>

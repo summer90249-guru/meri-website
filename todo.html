@@ -1,0 +1,23 @@
+<style>
+  body { text-align: center; background-color: lightblue; font-family: Arial; }
+  button { background-color: green; color: white; padding: 10px; border-radius: 10px; }
+  input { padding: 10px; }
+</style>
+
+<h1>Meri To-Do List</h1>
+<input id="kaam" placeholder="Aaj kya karna hai?">
+<button onclick="addKaro()">Add Karo</button>
+<button onclick="saafKaro()" style="background-color: red;">Saaf Karo</button>
+
+<h2 id="list"></h2>
+
+<script>
+function addKaro() {
+  let kaam = document.getElementById("kaam").value;
+  document.getElementById("list").innerHTML += "✅ " + kaam + "<br>";
+  document.getElementById("kaam").value = "";
+}
+function saafKaro() {
+  document.getElementById("list").innerHTML = "";
+}
+</script>
