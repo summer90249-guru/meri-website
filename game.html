@@ -1,0 +1,31 @@
+<style>
+  body { text-align: center; background-color: lightgreen; font-family: Arial; }
+  button { padding: 15px 25px; margin: 10px; font-size: 20px; background-color: black; color: white; border-radius: 15px; }
+</style>
+
+<h1>Rock Paper Scissors Game</h1>
+<h2>Tum kya chuno ge?</h2>
+
+<button onclick="khelo('Rock')">🪨 Rock</button>
+<button onclick="khelo('Paper')">📄 Paper</button>
+<button onclick="khelo('Scissors')">✂️ Scissors</button>
+
+<h2 id="result"></h2>
+
+<script>
+function khelo(user) {
+  let choices = ["Rock", "Paper", "Scissors"];
+  let computer = choices[Math.floor(Math.random() * 3)];
+  
+  let msg = "Tumne chuna: " + user + " | Computer ne chuna: " + computer + " | ";
+  
+  if (user == computer) {
+    msg += "Draw Ho Gaya! 😐";
+  } else if ((user == "Rock" && computer == "Scissors") || (user == "Paper" && computer == "Rock") || (user == "Scissors" && computer == "Paper")) {
+    msg += "Tum Jeet Gaye! 🎉";
+  } else {
+    msg += "Computer Jeet Gaya! 😢";
+  }
+  document.getElementById("result").innerText = msg;
+}
+</script>
